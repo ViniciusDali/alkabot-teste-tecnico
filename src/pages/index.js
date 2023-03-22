@@ -3,6 +3,7 @@ import { Quicksand } from "next/font/google";
 import styles from "@/styles/Home.module.css";
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { Header } from "@/components/Header";
 
 const quicksand = Quicksand({ subsets: ["latin"] });
 
@@ -54,18 +55,22 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={styles.main}>
+      <Header/>
+      <main id ={styles.mainContent} className={quicksand.className}>
+        <h1>Olá, Anonimo</h1>
         {posts.map((post) => {
           return (
-            <div key={post.id}>
-              <h2>{post.title}</h2>
+            <div key={post.id} className={styles.postCard}>
+              <h2 className={styles.postTitle}>{post.title}</h2>
 
-              <em>
+              <span className={styles.postAuthor}>
                 Escrito por{" "}
                 {users.find((user) => user.id === post.userId)?.name}
-              </em>
+              </span>
 
-              <p>{post.body}</p>
+              <p className={styles.postContent}>{post.body}</p>
+
+              <span className={styles.postLink}>Ver comentarios</span>
             </div>
           );
         })}

@@ -10,6 +10,7 @@ export default function Home() {
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
+  const [users, setUsers] = useState([]);
 
   useEffect(() => {
     const fetchPosts = async () => {
@@ -26,7 +27,23 @@ export default function Home() {
         setLoading(false);
       }
     };
+
+    const fetchUsers = async () => {
+      try {
+        setLoading(true);
+        const { data } = await axios.get(
+          "https://jsonplaceholder.typicode.com/users"
+        );
+        setUsers(data);
+      } catch (erro) {
+        setError(true);
+      } finally {
+        setLoading(false);
+      }
+    };
+
     fetchPosts();
+    fetchUsers();
   }, []);
 
   return (
@@ -42,6 +59,11 @@ export default function Home() {
           return (
             <div key={post.id}>
               <h2>{post.title}</h2>
+
+              <em>
+                Escrito por{" "}
+                {users.find((user) => user.id === post.userId)?.name}
+              </em>
 
               <p>{post.body}</p>
             </div>

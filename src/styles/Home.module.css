@@ -9,6 +9,7 @@
   margin: 58px 0;
   color: #333333;
   max-width: 800px;
+  text-decoration: none;
 }
 
 .postTitle {
@@ -30,20 +31,14 @@
 }
 
 .postLink {
-display: block;
-text-align: right;
-cursor: pointer;
-font-weight: 700;
-font-size: 0.8rem;
+  display: block;
+  text-align: right;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 0.8rem;
 }
 /* Mobile */
 @media (max-width: 700px) {
-  .main {
-  }
-
-  .postCard {
-  }
-
   .title {
     line-height: 27.5px;
     margin-left: 16px;
@@ -63,20 +58,10 @@ font-size: 0.8rem;
     margin-left: 16px;
     margin-right: 16px;
     margin-bottom: 16px;
-  }
-
-  .postLink {
-
   }
 }
 /* Tablet and Smaller Desktop */
 @media (min-width: 701px) and (max-width: 1120px) {
-  .main {
-  }
-
-  .postCard {
-  }
-
   .title {
     line-height: 27.5px;
     margin-left: 16px;
@@ -96,9 +81,5 @@ font-size: 0.8rem;
     margin-left: 16px;
     margin-right: 16px;
     margin-bottom: 16px;
-  }
-
-  .postLink {
-
   }
 }

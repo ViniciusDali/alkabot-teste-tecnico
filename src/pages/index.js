@@ -4,6 +4,7 @@ import styles from "@/styles/Home.module.css";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { Header } from "@/components/Header";
+import Link from "next/link";
 
 const quicksand = Quicksand({ subsets: ["latin"] });
 
@@ -12,6 +13,7 @@ export default function Home() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
   const [users, setUsers] = useState([]);
+  const [comments, setComments] = useState([]);
 
   useEffect(() => {
     const fetchPosts = async () => {
@@ -55,12 +57,12 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Header/>
-      <main id ={styles.mainContent} className={quicksand.className}>
-        <h1>Olá, Anonimo</h1>
+      <Header />
+      <main id={styles.mainContent} className={quicksand.className}>
+        <h1>Olá, Anônimo</h1>
         {posts.map((post) => {
           return (
-            <div key={post.id} className={styles.postCard}>
+            <Link href={`/${post.id}`} key={post.id} className={styles.postCard}>
               <h2 className={styles.postTitle}>{post.title}</h2>
 
               <span className={styles.postAuthor}>
@@ -70,8 +72,7 @@ export default function Home() {
 
               <p className={styles.postContent}>{post.body}</p>
 
-              <span className={styles.postLink}>Ver comentarios</span>
-            </div>
+            </Link>
           );
         })}
       </main>

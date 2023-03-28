@@ -1,0 +1,46 @@
+#mainContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  margin: 58px 0;
+  color: #333333;
+  width: 800px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  margin-top: 36px;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  margin: 16px 0;
+}
+
+.name {
+  margin-left: 16px;
+}
+
+.description {
+  color: #333333;
+}
+
+.value {
+  font-weight: bold;
+}
+
+@media (max-width: 700px) {
+  #mainContent {
+  }
+
+  .container {
+    padding: 0 32px;
+    width: 100%;
+  }
+}

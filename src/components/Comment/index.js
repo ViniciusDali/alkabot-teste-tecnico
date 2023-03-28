@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 import Avatar from "react-avatar";
 import styles from "../../styles/Comment.module.css";

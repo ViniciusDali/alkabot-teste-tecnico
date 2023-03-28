@@ -62,7 +62,11 @@ export default function Home() {
         <h1>Olá, Anônimo</h1>
         {posts.map((post) => {
           return (
-            <Link href={`/${post.id}`} key={post.id} className={styles.postCard}>
+            <Link
+              href={`posts/${post.id}`}
+              key={post.id}
+              className={styles.postCard}
+            >
               <h2 className={styles.postTitle}>{post.title}</h2>
 
               <span className={styles.postAuthor}>
@@ -71,7 +75,6 @@ export default function Home() {
               </span>
 
               <p className={styles.postContent}>{post.body}</p>
-
             </Link>
           );
         })}

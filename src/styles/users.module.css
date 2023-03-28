@@ -1,0 +1,43 @@
+#container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 16px 0;
+  color: #333333;
+  width: 100%;
+  align-items: center;
+}
+
+.userList {
+  width: 800px;
+}
+
+.users {
+  margin: 32px 0;
+  list-style: none;
+  padding: 0;
+}
+
+.mainComment {
+  margin: 16px 0;
+  border: 1px solid #f0f0f0;
+  border-radius: 8px;
+  padding: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.mainComment:hover {
+  background-color: #f0f0f0;
+}
+
+.name {
+  margin-left: 32px;
+}
+
+@media (max-width: 700px) {
+  .userList {
+    width: 100%;
+    padding: 0 32px;
+  }
+}

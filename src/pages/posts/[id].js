@@ -2,6 +2,7 @@ import { PageTemplate } from "@/components/PageTemplate";
 import axios from "axios";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
+import { Header } from "@/components/Header";
 
 export default function Post() {
   const [comments, setComments] = useState(null);
@@ -57,12 +58,15 @@ export default function Post() {
 
   if (post && comments) {
     return (
-      <PageTemplate
-        userId={post.userId}
-        title={post.title}
-        body={post.body}
-        comments={comments}
-      />
+      <>
+        <Header />
+        <PageTemplate
+          userId={post.userId}
+          title={post.title}
+          body={post.body}
+          comments={comments}
+        />
+      </>
     );
   }
 

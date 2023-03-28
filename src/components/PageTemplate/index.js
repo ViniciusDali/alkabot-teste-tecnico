@@ -35,7 +35,6 @@ export function PageTemplate(props) {
   return (
     <main id={styles.mainContent} className={quicksand.className}>
       <div className={styles.postCard}>
-        <Link href="/">Voltar</Link>
         <h1 className={styles.postTitle}>{props.title}</h1>
 
         <span className={styles.postAuthor}>

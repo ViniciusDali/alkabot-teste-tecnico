@@ -15,6 +15,9 @@
 
 /* Mobile */
 @media (max-width: 700px) {
+  #headerContainer {
+    padding: 0 36px;
+  }
 }
 
 /* Tablet and Smaller Desktop */

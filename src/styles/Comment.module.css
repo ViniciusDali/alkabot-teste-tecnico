@@ -1,0 +1,28 @@
+.mainComment {
+  display: flex;
+  width: 500px;
+  margin: 20px 0;
+  border: 1px solid #f0f0f0;
+  border-radius: 8px;
+  padding: 16px;
+  align-items: center;
+}
+
+.data {
+  margin-left: 16px;
+}
+
+.name {
+  font-weight: bold;
+}
+
+.body {
+  margin-top: 8px;
+}
+
+@media (max-width: 700px) {
+  .mainComment {
+    padding: 0 36px;
+    width: 100%;
+  }
+}

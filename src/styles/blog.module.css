@@ -2,11 +2,13 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin: 28px 0;
+  color: #333333;
+  width: 100%;
   align-items: center;
 }
 
 .postCard {
-  margin: 58px 0;
   color: #333333;
   max-width: 800px;
   text-decoration: none;
@@ -15,7 +17,8 @@
 .postTitle {
   font-weight: 700;
   font-size: 22px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+  margin-top: 20px;
 }
 
 .postAuthor {
@@ -37,50 +40,58 @@
   font-weight: 700;
   font-size: 0.8rem;
 }
+.Comment {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
 /* Mobile */
 @media (max-width: 700px) {
-  #mainContent {
-    padding: 0 36px;
-  }
-
-  .title {
+  .postTitle {
     line-height: 27.5px;
     margin-left: 16px;
     margin-right: 16px;
     margin-bottom: 16px;
   }
 
-  .author {
+  .postAuthor {
     line-height: 20px;
     margin-left: 16px;
     margin-right: 16px;
     margin-bottom: 16px;
   }
 
-  .text {
+  .postContent {
     line-height: 20px;
     margin-left: 16px;
     margin-right: 16px;
     margin-bottom: 16px;
+  }
+
+  .postCard {
+    padding: 0 16px;
   }
 }
 /* Tablet and Smaller Desktop */
 @media (min-width: 701px) and (max-width: 1120px) {
-  .title {
+  .postTitle {
     line-height: 27.5px;
     margin-left: 16px;
     margin-right: 16px;
     margin-bottom: 16px;
   }
 
-  .author {
+  .postAuthor {
     line-height: 20px;
     margin-left: 16px;
     margin-right: 16px;
     margin-bottom: 16px;
   }
 
-  .text {
+  .postContent {
     line-height: 20px;
     margin-left: 16px;
     margin-right: 16px;
